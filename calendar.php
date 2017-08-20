@@ -1,0 +1,71 @@
+<?php
+	require("classes/yb-globals.inc.php");
+    
+    session_start();
+    
+    if(!isset($_SESSION['token'])){
+        exit('illegal access!');
+     }
+	 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>我的日历</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/calendar.css">
+	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
+</head>
+<body>
+
+	<div id="calendar" class="calendar"></div>
+	<div id="schedule" class="schedule">
+
+		<div id="event-modal" class="event-modal">
+			<div class="event-modal-content">
+				<div class="event-modal-title"></div>
+				<div class="event-modal-info">
+					<div class="event-modal-date"></div>
+					<div class="event-modal-starttime"></div>
+					<div class="event-modal-endtime"></div>
+					<div class="event-modal-spot"></div>
+					<div class="event-modal-state"></div>
+				</div><br>
+				<div class="event-modal-detail"></div>
+				<div class="event-modal-moral"></div>
+				<div class="event-modal-hold"></div>
+			</div>
+			<div class="modal-footer center">
+				<a class="event-finished btn-flat">已完成</a>
+				<a class="cancel btn-flat">取消</a>
+			</div>
+
+		</div>
+
+		<div id="list">
+		<a class="schedule-line hide">
+			<div class="schedule-desc left">
+				<div class="schedule-first-colm left">
+					<div class="schedule-start-time"></div>
+					<div class="schedule-end-time"></div>
+				</div>
+				<div class="title233 schedule-second-colm left"></div>
+			</div>
+			<div class="delete233 schedule-cls right">
+				<span class="icon-cross"></span>
+			</div>
+		</a>
+		</div>
+		<div id="list1"></div>
+	</div>
+	<div class="event-modal-overlay"></div>
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+	<script src="js/calendar.js"></script>
+	<script src="js/list.js"></script>
+
+</body>
+</html>
