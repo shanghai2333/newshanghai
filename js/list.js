@@ -123,6 +123,7 @@ function show_list(today_date){
             onetitle.find("a").attr("class","schedule-line");
             onetitle.find("a").attr("onclick","change_model_for_my('"+today_date+"','"+activity_id+"','"+activity_title+"','"+activity_info+"','"+start_time+"','"+end_time+"')");
             onetitle.find(".delete233").attr("onclick","delete_for_my("+activity_id+")");
+            onetitle.find(".changebar").attr("onclick","edit_my("+activity_id+")");
             $("#list1").append(onetitle);
 
           }

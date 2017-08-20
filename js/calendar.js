@@ -10,6 +10,14 @@ $(function () {
   window.onresize = function(){
     resize();
   }
+    $('#addEvent').click(function(){
+      $('.calendar-editbar').removeClass('zoom-out-right');
+      $('.calendar-editbar').addClass('zoom-in-left');  
+    })
+  $('.calendar-edit-back').click(function(){
+    $('.calendar-editbar').removeClass('zoom-in-left');
+    $('.calendar-editbar').addClass('zoom-out-right');
+  })
 
 });
 
@@ -22,8 +30,9 @@ function resize(){
   var calendarH = $(".calendar").height();
   var scheduleH = winH - calendarH;
   $("#schedule").height(scheduleH);
-$(".calendar-date .item").height($(".calendar-date .item").width());
+  $(".calendar-date .item").height($(".calendar-date .item").width());
   $(".calendar-date .item").css("line-height",$(".calendar-date .item").height()+'px');
+  $(".calendar-edit-body").height($(".calendar-editbar").height()-$(".calendar-edit-title").height());
 
 }
 ;(function ($, window, document, undefined) {

@@ -20,7 +20,7 @@
 	<link rel="stylesheet" type="text/css" href="css/materialize.min.css">
 </head>
 <body>
-
+<div class="calendar-showbar">
 	<div id="calendar" class="calendar"></div>
 	<div id="schedule" class="schedule">
 
@@ -54,18 +54,91 @@
 				</div>
 				<div class="title233 schedule-second-colm left"></div>
 			</div>
-			<div class="delete233 schedule-cls right">
-				<span class="icon-cross"></span>
+			<!--      !!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+			<div class="">
+				<span class="changebar icon-cross"></span>
+			</div>
+
+			<!--      !!!!!!!!!!!!!!!!!!!!!!!!!-->
+			<div class="schedule-cls right">
+				<span class="delete233 icon-cross"></span>
 			</div>
 		</a>
 		</div>
 		<div id="list1"></div>
 	</div>
 	<div class="event-modal-overlay"></div>
+</div>
+<div class="calendar-editbar">
+	<div class="calendar-edit-title">
+		<a class="calendar-edit-back left">返回</a>
+		添加事件
+		<a class="calendar-edit-finish right" onclick="finish_add_new()">完成</a>
+	</div>
+	<div class="calendar-edit-body">
+		<div class="calendar-edit-part">
+			<div class="calendar-edit-line" id="edit-event-name" style="border-bottom: 1px solid #dedede;">
+				<input type="text" name="edit-event-name" placeholder="事件名称">
+			</div>
+		</div>
+		<div class="calendar-edit-part">
+			<div class="calendar-edit-line" id="edit-event-starttime" style="border-bottom: 1px solid #dedede;">
+				<input type="text" name="edit-event-starttime" placeholder="起始时间">
+			</div>
+			<div class="calendar-edit-line" id="edit-event-endtime">
+				<input type="text" name="edit-event-endtime" placeholder="结束时间">
+			</div>
+		</div>
+		<div class="calendar-edit-part">
+			<div class="calendar-edit-line" id="edit-event-desc">
+				<input type="text" name="edit-event-desc" placeholder="详细信息">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- 编辑框！！！ -->
+
+<div class="calendar-editbar">
+	<div class="calendar-edit-title">
+		<a class="calendar-edit-back left">返回</a>
+		编辑事件
+	</div>
+	<div class="calendar-edit-body">
+		<div class="calendar-edit-part">
+			<div class="calendar-edit-line" id="edit-event-name" style="border-bottom: 1px solid #dedede;">
+				<input id="event_name" type="text" name="edit-event-name" >
+			</div>
+		</div>
+		<div class="calendar-edit-part">
+			<div class="calendar-edit-line" id="edit-event-starttime" style="border-bottom: 1px solid #dedede;">
+				<input id="event_starttime" type="text" name="edit-event-starttime">
+			</div>
+			<div class="calendar-edit-line" id="edit-event-endtime">
+				<input id="event_endtime" type="text" name="edit-event-endtime">
+			</div>
+		</div>
+		<div class="calendar-edit-part">
+			<div class="calendar-edit-line" id="edit-event-desc">
+				<input id="event_desc" type="text" name="edit-event-desc">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- 编辑框！！！ -->
+
+
+
 	<script src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/materialize.min.js"></script>
 	<script src="js/calendar.js"></script>
 	<script src="js/list.js"></script>
+	<script src="js/edit.js"></script>
 
 </body>
 </html>
